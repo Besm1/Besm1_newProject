@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2cb194c-f3b1-4c09-97f0-3eec0e5b6f01" name="Changes" comment="Try this new project">
+      <change afterPath="$PROJECT_DIR$/MyClasses/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module_5_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module_5_1_extra.py" beforeDir="false" afterPath="$PROJECT_DIR$/module_5_1_extra.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module_5_0.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyClasses/module_5_0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module_5_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyClasses/module_5_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module_5_1_extra.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyClasses/module_5_1_extra.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module_5_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyClasses/module_5_2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +45,8 @@
     "Python.main.executor": "Run",
     "Python.module_5_1.executor": "Run",
     "Python.module_5_1_extra.executor": "Run",
+    "Python.module_5_2.executor": "Run",
+    "Python.module_5_3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "settings.editor.selected.configurable": "terminal"
   },
@@ -47,6 +54,11 @@
     "ChangesTree.GroupingKeys": []
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\b.smirnov\Documents\pythonProjectsForUniversity\Besm1_newProject\MyClasses" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -119,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723065926402</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Try this new project">
+      <option name="closed" value="true" />
+      <created>1723636428754</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723636428754</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
