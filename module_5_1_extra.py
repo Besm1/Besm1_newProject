@@ -14,13 +14,16 @@ class House():
 
 
 class Walker():
+    # Класс "Пешеход". У него есть имя и текущее положение - текущий дом и этаж
+    # Пешеход умеет ходить по домам и сообщать о своих передвижениях.
     name = str(None)
     current_house = None
     current_floor = None
 
+    def say_where(self):
+        pass
+
     def __init__(self, name, cur_house = None, cur_fl = None):
-        # Класс "Пешеход". У него есть имя и текущее положение - текущий дом и этаж
-        # Пешеход умеет ходить по домам и сообщать о своих передвижениях.
         self.name, self.current_house, self.current_floor = name, cur_house, cur_fl
 
     def go_to(self, house, floor = None):
