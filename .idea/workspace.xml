@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2cb194c-f3b1-4c09-97f0-3eec0e5b6f01" name="Changes" comment="Создали module5hard">
+    <list default="true" id="a2cb194c-f3b1-4c09-97f0-3eec0e5b6f01" name="Changes" comment="Добавили все методы, кроме watch_video">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module5hard.py" beforeDir="false" afterPath="$PROJECT_DIR$/module5hard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Programs/Python/Python312/Lib/tkinter/__init__.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -47,7 +49,7 @@
     "Python.module_5_4.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "terminal"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": []
@@ -170,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723760815348</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Добавили все методы, кроме watch_video">
+      <option name="closed" value="true" />
+      <created>1723841257104</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723841257104</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +200,7 @@
     <MESSAGE value="Создали module_5_3" />
     <MESSAGE value="Создали module_5_4" />
     <MESSAGE value="Создали module5hard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создали module5hard" />
+    <MESSAGE value="Добавили все методы, кроме watch_video" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавили все методы, кроме watch_video" />
   </component>
 </project>

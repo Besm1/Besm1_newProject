@@ -1,5 +1,9 @@
 import hashlib
 from time import sleep
+import tkinter as tk
+
+
+# print(help(tkinter))
 
 class User:
     def __init__(self, nickname, password, age):
@@ -21,6 +25,7 @@ class Video:
         self.title = title
         self.duration = duration
         self.adult_mode = adult_mode
+        self.time_now: int = 0
 
     def __str__(self):
         return f'{self.title}, {self.duration} сек.'  + (' (18+)' if self.adult_mode else '')
@@ -34,7 +39,7 @@ class UrTube:
     def add(self, *vidosiki):
         if all([isinstance(o_, Video) for o_ in vidosiki]):
             for v_ in [new_v for new_v in vidosiki if new_v.title not in [exist_v.title for exist_v in self.videos]]:
-                print(f'Добавляем на сайт фильм "{v_.title}"')
+                # print(f'Добавляем на сайт фильм "{v_.title}"')
                 self.videos.append(v_)
 
 
@@ -73,59 +78,73 @@ class UrTube:
             self.current_user = None
 
     def watch_video(self,film_name: str):
-        video = [v_ for v_ in self.videos if v_.title == film_name]
-        if len(video) == 1:
-             if not video.adult_mode or self.current_user.age >= 18:
-                 print(f'Смотрим фильм {str(video)}')
-             else:
-                 print(f'{self.current_user.nickname}, тебе рано ещё смореть такие фильмы! '
-                       + f'Приходи лет эдак через {18 - self.current_user.age}!')
+        if self.current_user == None:
+            print('Сначала войди или зарегистрируйся на сайте!')
         else:
-            print(f'Фильм "{film_name}" не найден, наверное, ещё не завезли. Попробуй позже.')
+            video = [v_ for v_ in self.videos if v_.title == film_name]
+            if len(video) == 1:
+                 if not video[0].adult_mode or self.current_user.age >= 18:
+                     print(f'Смотрим фильм "{str(video[0])}"')
+                     p = Player(video[0])
+                 else:
+                     print(f'{self.current_user.nickname}, тебе рано ещё смореть такие фильмы! '
+                           + f'Приходи лет эдак через {18 - self.current_user.age}!')
+            else:
+                print(f'Фильм "{film_name}" не найден, наверное, ещё не завезли. Попробуй позже.')
+
+class Player():
+
+    def __init__(self, vidos: Video):
+
+        # window = tk.Tk()
+        #
+        # window.title(vidos.title)
+        # window.geometry('800x450')
+        # window.resizable(False, False)
+        # text = tk.Label(window, text=f'Смотрим: {vidos.time_now} сек.')
+        # text.place(x=350,y=220)
+        # while vidos.time_now <= vidos.duration:
+        #     sleep(1)
+        #     vidos.time_now += 1
+        #     text = tk.Label(window, text=f'Смотрим: {vidos.time_now} сек.')
+        #     text.place(x=350, y=220)
+        # text = tk.Label(window, text='Ребята, а что вы тут делаете, а? Кино-то давно кончилось!')
+        # text.place(x=350, y=220)
+        # button = tk.Button(window, text='Закрыть плеер', width=40, height=5)
+        # window.mainloop()
+        print(f'Смотрим: {vidos.time_now} сек.')
+        while vidos.time_now < vidos.duration:
+            sleep(1)
+            vidos.time_now += 1
+            print(f'Смотрим: {vidos.time_now} сек.')
+        print('\nРебята, а что вы тут делаете, а? Кино-то давно кончилось!\n\n')
 
 
 
-ur = UrTube()
-v1 = Video('Лучший язык программирования 2024 года', 200)
-v2 = Video('Для чего девушкам парень программист?', 10, adult_mode=True)
 
-# Добавление видео
-ur.add(v1, v2)
-v3 = Video('Для чего девушкам парень программист?', 10, adult_mode=True)
-v4 = Video('Для чего девушкам парень шахматист?', 10, adult_mode=True)
-ur.add(v3, v4)
-#
-# print([exist_v.title for exist_v in ur.videos])
-# print(v3.title not in [exist_v.title for exist_v in ur.videos])
-# for v_ in [new_v for new_v in (v3,v4) if new_v.title not in [exist_v.title for exist_v in ur.videos]]:
-#     print(str(v_))
+if __name__ == '__main__':
+    ur = UrTube()
+    v1 = Video('Лучший язык программирования 2024 года', 200)
+    v2 = Video('Для чего девушкам парень программист?', 10, adult_mode=True)
 
-# # print(v1.title.lower().find('Лучший'))
-#
-#
-# # print(ur.videos)
-# # # print([v_ for v_ in [tv_ for tv_ in ur.videos]])
-# # Проверка поиска
-# print('поиск')
-# print(ur.get_videos('лучший'))
-# print(ur.get_videos('ПРОГ'))
-#
-# ur.register('vasya_pupkin', 'lolkekcheburek', 13)
-# print(f'Текущий пользователь:  {str(ur.current_user)}')
-# # ur.watch_video('Для чего девушкам парень программист?')
-# ur.register('urban_pythonist', 'iScX4vIJClb9YQavjAgF', 25)
-# print(f'Текущий пользователь:  {str(ur.current_user)}')
-# ur.register('urban_pythonist', 'iScX4vIJClb9YQavjAgF', 25)
-# print(f'Текущий пользователь:  {str(ur.current_user)}')
-#
-# print('Список пользователей:', [str(u_) for u_ in ur.users])
-#
-# ur.log_in('vasya_pupkin', 'lolkekcheburek')
-# print(f'Текущий пользователь:  {str(ur.current_user)}')
-# ur.log_in('vasya_pupkin', 'lolkekbelyash')
-# print(f'Текущий пользователь:  {str(ur.current_user)}')
-# ur.log_in('vasya_popkin', 'lolkekbelyash')
-# print(f'Текущий пользователь:  {str(ur.current_user)}')
-#
-# # if __name__ == '__main__':
-# #     while true
+    # Добавление видео
+    ur.add(v1, v2)
+
+    # Проверка поиска
+    print(ur.get_videos('лучший'))
+    print(ur.get_videos('ПРОГ'))
+
+    # Проверка на вход пользователя и возрастное ограничение
+    ur.watch_video('Для чего девушкам парень программист?')
+    ur.register('vasya_pupkin', 'lolkekcheburek', 13)
+    ur.watch_video('Для чего девушкам парень программист?')
+    ur.register('urban_pythonist', 'iScX4vIJClb9YQavjAgF', 25)
+    ur.watch_video('Для чего девушкам парень программист?')
+
+    # Проверка входа в другой аккаунт
+    ur.register('vasya_pupkin', 'F8098FM8fjm9jmi', 55)
+    print(ur.current_user)
+
+    # Попытка воспроизведения несуществующего видео
+    ur.log_in('urban_pythonist', 'iScX4vIJClb9YQavjAgF')
+    ur.watch_video('Лучший язык программирования 2024 года!')
