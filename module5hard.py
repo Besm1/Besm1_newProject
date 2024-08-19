@@ -5,7 +5,7 @@ import tkinter as tk
 # print(help(tkinter))
 
 class User:
-    def __init__(self, nickname, password, age):
+    def __init__(self, nickname:str, password:str, age:int):
         self.nickname = nickname
         self.password = hash(password)
         self.age = age
@@ -13,15 +13,9 @@ class User:
     def __str__(self):
         return f'{self.nickname}, {self.age} лет.'
 
-    def user_name(self):
-        return self.nickname
-
-    def find(self, username):
-        return self.nickname.find(username)
-
 
 class Video:
-    def __init__(self, title, duration, adult_mode=False):
+    def __init__(self, title:str, duration:int, adult_mode=False):
         self.title = title
         self.duration = duration
         self.adult_mode = adult_mode
@@ -38,10 +32,11 @@ class UrTube:
         self.current_user = None
 
     def add(self, *vidosiki):
-        if all([isinstance(o_, Video) for o_ in vidosiki]):
-            for v_ in [new_v for new_v in vidosiki if new_v.title not in [exist_v.title for exist_v in self.videos]]:
-                print(f'* Добавляем на сайт фильм "{v_.title}"')
-                self.videos.append(v_)
+        for v_ in [new_v for new_v in vidosiki if isinstance(new_v, Video)  # добавляем только объекты класса Video
+                                                                            # которых ещё нет на сайте
+                                                  and new_v.title not in [exist_v.title for exist_v in self.videos]]:
+            print(f'* Добавляем на сайт фильм "{v_.title}"')
+            self.videos.append(v_)
 
     def get_videos(self, pattern: str):
         print(f'* Подбираем фильмы, в названии которых есть строка "{pattern}"')
@@ -55,12 +50,12 @@ class UrTube:
             print(f'  Приятно познакомиться, {self.current_user.nickname}! ')
         else:
             self.current_user = None
-            print(f'  Пользователь {username} уже существует')
+            print(f'  Пользователь {username} уже зарегистрирован.')
 
     def log_in(self, username, password):
         print(f'* Попытка входа пользователя {username}.')
-        user = [u_ for u_ in self.users if u_.user_name().lower() == username.lower()]
-        if len(user) == 1:
+        user = [u_ for u_ in self.users if u_.nickname.lower() == username.lower()]
+        if len(user) == 1:  # Существует такой пользователь! И он ровно один.
             print(f'  {user[0].nickname}, это ты?')
             if user[0].password == hash(password):
                 print(f'  Здравствуй, {user[0].nickname}! Выбирай фильм. Приятного просмотра!')
@@ -85,7 +80,7 @@ class UrTube:
             print('  Сначала войди или зарегистрируйся на сайте!')
         else:
             video = [v_ for v_ in self.videos if v_.title == film_name]
-            if len(video) == 1:
+            if len(video) == 1: # Такой фильм есть! И он один.
                 if not video[0].adult_mode or self.current_user.age >= 18:
                     Player(video[0])
                 else:
@@ -138,6 +133,7 @@ if __name__ == '__main__':
 
     # Проверка на вход пользователя и возрастное ограничение
     ur.watch_video('Для чего девушкам парень программист?')
+    ur.log_out()
     ur.register('vasya_pupkin', 'lolkekcheburek', 13)
     ur.watch_video('Для чего девушкам парень программист?')
     ur.register('urban_pythonist', 'iScX4vIJClb9YQavjAgF', 25)
@@ -149,3 +145,4 @@ if __name__ == '__main__':
     # Попытка воспроизведения несуществующего видео
     ur.log_in('urban_pythonist', 'iScX4vIJClb9YQavjAgF')
     ur.watch_video('Лучший язык программирования 2024 года!')
+    ur.log_out()
