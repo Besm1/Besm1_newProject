@@ -1,6 +1,8 @@
 from time import sleep
-import tkinter as tk
-
+# import tkinter as tk
+"""
+Полностью инкапсулированные классы.
+"""
 
 # print(help(tkinter))
 
@@ -13,6 +15,15 @@ class User:
     def __str__(self):
         return f'{self.nickname}, {self.age} лет.'
 
+    def get_nick(self) -> str:
+        return self.nickname
+
+    def get_hashed_pwd(self) -> int:
+        return self.password
+
+    def get_age(self) -> int:
+        return self.age
+
 
 class Video:
     def __init__(self, title:str, duration:int, adult_mode=False):
@@ -24,6 +35,20 @@ class Video:
     def __str__(self):
         return f'{self.title}, {self.duration} сек.' + (' (18+)' if self.adult_mode else '')
 
+    def get_title(self) -> str:
+        return self.title
+
+    def get_duration(self) -> int:
+        return self.duration
+
+    def get_adult_mode(self) -> bool:
+        return self.adult_mode
+
+    def get_time_now(self) -> int:
+        return self.time_now
+
+    def set_time_now(self, time: int):
+        self.time_now = time
 
 class UrTube:
     def __init__(self):
@@ -34,31 +59,31 @@ class UrTube:
     def add(self, *vidosiki):
         for v_ in [new_v for new_v in vidosiki if isinstance(new_v, Video)  # добавляем только объекты класса Video
                                                                             # которых ещё нет на сайте
-                                                  and new_v.title not in [exist_v.title for exist_v in self.videos]]:
-            print(f'* Добавляем на сайт фильм "{v_.title}"')
+                                                  and new_v.get_title() not in [exist_v.get_title() for exist_v in self.videos]]:
+            print(f'* Добавляем на сайт фильм "{v_.get_title()}"')
             self.videos.append(v_)
 
     def get_videos(self, pattern: str):
         print(f'* Подбираем фильмы, в названии которых есть строка "{pattern}"')
-        return [str(v_) for v_ in self.videos if v_.title.lower().find(pattern.lower()) >= 0]
+        return [str(v_) for v_ in self.videos if v_.get_title().lower().find(pattern.lower()) >= 0]
 
     def register(self, username: str, password: str, age: int):
         print(f'* Попытка регистрации пользователя {username}')
-        if username not in [n_.nickname for n_ in self.users]:
+        if username not in [n_.get_nick() for n_ in self.users]:
             self.current_user = User(username, password, age)
             self.users.append(self.current_user)
-            print(f'  Приятно познакомиться, {self.current_user.nickname}! ')
+            print(f'  Приятно познакомиться, {self.current_user.get_nick()}! ')
         else:
             self.current_user = None
             print(f'  Пользователь {username} уже зарегистрирован.')
 
     def log_in(self, username, password):
         print(f'* Попытка входа пользователя {username}.')
-        user = [u_ for u_ in self.users if u_.nickname.lower() == username.lower()]
+        user = [u_ for u_ in self.users if u_.get_nick().lower() == username.lower()]
         if len(user) == 1:  # Существует такой пользователь! И он ровно один.
-            print(f'  {user[0].nickname}, это ты?')
-            if user[0].password == hash(password):
-                print(f'  Здравствуй, {user[0].nickname}! Выбирай фильм. Приятного просмотра!')
+            print(f'  {user[0].get_nick()}, это ты?')
+            if user[0].get_hashed_pwd() == hash(password):
+                print(f'  Здравствуй, {user[0].get_nick()}! Выбирай фильм. Приятного просмотра!')
                 self.current_user = user[0]
             else:
                 print(f'  Что-то ты на себя не похож... Вспоминай пароль!')
@@ -71,7 +96,7 @@ class UrTube:
         if self.current_user is None:
             print('  А никто и не входил!..')
         else:
-            print(f'  До свидания, {self.current_user.nickname}! Приходи ещё!')
+            print(f'  До свидания, {self.current_user.get_nick()}! Приходи ещё!')
             self.current_user = None
 
     def watch_video(self, film_name: str):
@@ -79,13 +104,13 @@ class UrTube:
         if self.current_user is None:
             print('  Сначала войди или зарегистрируйся на сайте!')
         else:
-            video = [v_ for v_ in self.videos if v_.title == film_name]
+            video = [v_ for v_ in self.videos if v_.get_title() == film_name]
             if len(video) == 1: # Такой фильм есть! И он один.
-                if not video[0].adult_mode or self.current_user.age >= 18:
+                if not video[0].get_adult_mode() or self.current_user.get_age() >= 18:
                     Player(video[0])
                 else:
-                    print(f'  {self.current_user.nickname}, тебе рано ещё смореть такие фильмы! '
-                          + f'Приходи лет эдак через {18 - self.current_user.age}!')
+                    print(f'  {self.current_user.get_nick()}, тебе рано ещё смореть такие фильмы! '
+                          + f'Приходи лет эдак через {18 - self.current_user.get_age()}!')
             else:
                 print(f'  Фильм "{film_name}" не найден, наверное, ещё не завезли. Попробуй позже.')
 
@@ -112,10 +137,10 @@ class Player:
         # button = tk.Button(window, text='Закрыть плеер', width=40, height=5)
 
         print(f'  Смотрим фильм "{str(vidos)}"')
-        while vidos.time_now < vidos.duration:
+        while vidos.get_time_now() < vidos.duration:
             sleep(1)
-            vidos.time_now += 1
-            print(f'  {vidos.time_now}', end = '')
+            vidos.set_time_now(vidos.get_time_now() + 1)
+            print(f'  {vidos.get_time_now()}', end = '')
         print('  Ребята, а что вы тут делаете, а? Кино-то давно кончилось!')
 
 
