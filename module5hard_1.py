@@ -51,6 +51,7 @@ class Video:
         if time <= self.__duration:
             self.__time_now = time
 
+
 class UrTube:
     def __init__(self):
         self.__users = []
