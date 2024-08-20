@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2cb194c-f3b1-4c09-97f0-3eec0e5b6f01" name="Changes" comment="Теперь и watch_video добавили! И комменты.">
-      <change afterPath="$PROJECT_DIR$/Module_6_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a2cb194c-f3b1-4c09-97f0-3eec0e5b6f01" name="Changes" comment="Началась тема 6.">
+      <change beforePath="$PROJECT_DIR$/module5hard_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/module5hard_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +225,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724155274867</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Теперь и watch_video добавили! И комменты.">
+      <option name="closed" value="true" />
+      <created>1724169460646</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724169460646</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Началась тема 6.">
+      <option name="closed" value="true" />
+      <created>1724169527301</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724169527301</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +264,7 @@
     <MESSAGE value="Добавили все методы, кроме watch_video" />
     <MESSAGE value="Теперь и watch_video добавили!" />
     <MESSAGE value="Теперь и watch_video добавили! И комменты." />
-    <option name="LAST_COMMIT_MESSAGE" value="Теперь и watch_video добавили! И комменты." />
+    <MESSAGE value="Началась тема 6." />
+    <option name="LAST_COMMIT_MESSAGE" value="Началась тема 6." />
   </component>
 </project>
