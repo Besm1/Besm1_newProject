@@ -48,7 +48,8 @@ class Video:
         return self.time_now
 
     def set_time_now(self, time: int):
-        self.time_now = time
+        if time <= self.duration:
+            self.time_now = time
 
 class UrTube:
     def __init__(self):
