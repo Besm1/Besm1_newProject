@@ -5,7 +5,7 @@ class Sedan(Vehicle):
     __PASSENGERS_LIMIT = 5
 
     def __init__(self, owner:str, model:str, color:str, engine_power:int):
-        super().__init__()
+
         if engine_power <= 0:
             print('Мощность должна быть положительной')
         elif color.lower() not in self._Vehicle__COLOR_VARIANTS:
