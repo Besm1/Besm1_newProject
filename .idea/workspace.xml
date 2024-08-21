@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2cb194c-f3b1-4c09-97f0-3eec0e5b6f01" name="Changes" comment="Началась тема 6.">
-      <change beforePath="$PROJECT_DIR$/module5hard_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/module5hard_1.py" afterDir="false" />
+    <list default="true" id="a2cb194c-f3b1-4c09-97f0-3eec0e5b6f01" name="Changes" comment="Инкапсуляция">
+      <change afterPath="$PROJECT_DIR$/Module_6_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +41,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python.Module_6_1.executor": "Run",
+    "Python.Module_6_2.executor": "Run",
     "Python.main.executor": "Run",
     "Python.module5hard.executor": "Run",
     "Python.module5hard_1.executor": "Run",
@@ -241,7 +243,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724169527301</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Началась тема 6.">
+      <option name="closed" value="true" />
+      <created>1724180745978</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1724180745978</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Инкапсуляция">
+      <option name="closed" value="true" />
+      <created>1724180787604</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1724180787604</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,6 +283,7 @@
     <MESSAGE value="Теперь и watch_video добавили!" />
     <MESSAGE value="Теперь и watch_video добавили! И комменты." />
     <MESSAGE value="Началась тема 6." />
-    <option name="LAST_COMMIT_MESSAGE" value="Началась тема 6." />
+    <MESSAGE value="Инкапсуляция" />
+    <option name="LAST_COMMIT_MESSAGE" value="Инкапсуляция" />
   </component>
 </project>
