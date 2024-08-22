@@ -40,7 +40,6 @@ a2 = Mammal('Хатико')
 p1 = Flower('Цветик семицветик')
 p2 = Fruit('Заводной апельсин')
 
-
 print(a1.name)
 print(p1.name)
 print(a2.name)

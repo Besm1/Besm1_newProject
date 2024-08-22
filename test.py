@@ -1,10 +1,10 @@
-# def test(*args):
-#     print(args)
-#
-#
-# test(1,2,3)
+class Human:
+    head = True
+    _legs = True
+    __arms = True
 
+class Student(Human):
+    __arms = False
 
-d_ = {1:11, 2:22}
-
-print('Yes' if 11 in d_ else 'No')
+print(dir(Human))
+print(dir(Student))
