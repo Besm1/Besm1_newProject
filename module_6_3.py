@@ -5,9 +5,6 @@ class Horse:
     def run(self, dx):
         self.x_distance += dx
 
-    def get_pos(self):
-        return (self.x_distance)
-
 
 class Eagle:
     sound = 'I train, eat, sleep, and repeat'
@@ -15,9 +12,6 @@ class Eagle:
 
     def fly(self, dy):
         self.y_distance += dy
-
-    def get_pos(self):
-        return (self.y_distance)
 
 class Pegasus(Horse, Eagle):
     def move(self, dx, dy):
@@ -29,21 +23,6 @@ class Pegasus(Horse, Eagle):
 
     def voice(self):
         print(self.sound)
-
-
-# print(Pegasus.mro())
-#
-# h1 = Horse()
-# print(h1.sound)
-# print(h1.get_pos())
-# h1.run(20)
-# print(h1.get_pos())
-#
-# e1 = Eagle()
-# print(e1.sound)
-# print(e1.get_pos())
-# e1.fly(50)
-# print(e1.get_pos())
 
 
 p1 = Pegasus()

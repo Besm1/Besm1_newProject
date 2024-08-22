@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2cb194c-f3b1-4c09-97f0-3eec0e5b6f01" name="Changes" comment="Инкапсуляция">
-      <change afterPath="$PROJECT_DIR$/module_6_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_6_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Module_6_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-    </list>
+    <list default="true" id="a2cb194c-f3b1-4c09-97f0-3eec0e5b6f01" name="Changes" comment="Множественное наследование" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -278,7 +273,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724271025992</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Инкапсуляция">
+      <option name="closed" value="true" />
+      <created>1724355834864</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1724355834864</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Множественное наследование">
+      <option name="closed" value="true" />
+      <created>1724355895868</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1724355895868</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Множественное наследование">
+      <option name="closed" value="true" />
+      <created>1724355939013</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1724355939013</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -303,6 +322,7 @@
     <MESSAGE value="Теперь и watch_video добавили! И комменты." />
     <MESSAGE value="Началась тема 6." />
     <MESSAGE value="Инкапсуляция" />
-    <option name="LAST_COMMIT_MESSAGE" value="Инкапсуляция" />
+    <MESSAGE value="Множественное наследование" />
+    <option name="LAST_COMMIT_MESSAGE" value="Множественное наследование" />
   </component>
 </project>
