@@ -26,6 +26,7 @@ class Pegasus(Horse, Eagle):
 
 
 p1 = Pegasus()
+print(Pegasus.mro())
 
 print(p1.get_pos())
 p1.move(dx=10, dy=15)
