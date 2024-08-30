@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2cb194c-f3b1-4c09-97f0-3eec0e5b6f01" name="Changes" comment="Множественное наследование">
+      <change afterPath="$PROJECT_DIR$/module6hard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module_6_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/module_6_3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +45,7 @@
     "Python.main.executor": "Run",
     "Python.module5hard.executor": "Run",
     "Python.module5hard_1.executor": "Run",
+    "Python.module6hard.executor": "Run",
     "Python.module_5_1.executor": "Run",
     "Python.module_5_1_extra.executor": "Run",
     "Python.module_5_2.executor": "Run",
@@ -54,7 +55,7 @@
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/b.smirnov/Documents/pythonProjectsForUniversity/Besm1_newProject",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": []
@@ -308,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724356045726</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Множественное наследование">
+      <option name="closed" value="true" />
+      <created>1724956988101</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1724956988101</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
