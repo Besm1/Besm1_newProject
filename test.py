@@ -1,10 +1,3 @@
-class Human:
-    head = True
-    _legs = True
-    __arms = True
+import functools as ft
 
-class Student(Human):
-    __arms = False
-
-print(dir(Human))
-print(dir(Student))
+print(ft.reduce(lambda x,y: x*y,  (2,3,4)))
