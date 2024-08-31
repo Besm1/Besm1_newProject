@@ -20,7 +20,6 @@ class Figure:
         return self.__color
 
     def __is_valid_sides(self, *args):
-        # print(f'__is_valid_sides. args = {args}')
         return (len(args) == self.sides_count) and all(isinstance(side_, int) and (side_ > 0) for side_ in args)
 
     def get_sides(self):
@@ -39,9 +38,13 @@ class Figure:
 class Triangle(Figure):
     sides_count = 3
 
-    def __init__(self, color, *sides, filled=False):
-        # print(f'Иниц треуг. sides = {sides}')
-        super().__init__(color, *sides, filled=filled)
+    # def __init__(self, color, *sides, filled=False):
+    #     # print(f'Иниц треуг. sides = {sides}')
+    #     super().__init__(color, *sides, filled=filled)
+    #
+    def __is_valid_sides(self, *args):
+        print(f'Triangle: __is_valid_sides {args}')
+        return super().__is_valid_sides(*args) and all(2 * s_ < sum(args) for s_ in args)
 
     def get_square(self):
         p = self.__len__() / 2.
@@ -53,7 +56,7 @@ class Triangle(Figure):
         return (p * expr) ** 0.5
 
 if __name__ == '__main__':
-    tri1 = Triangle((200,200,33),3,4,5)
+    tri1 = Triangle((200,200,33),1,2,6)
     print(tri1.get_sides())
     print(tri1.get_color())
     print(len(tri1))
