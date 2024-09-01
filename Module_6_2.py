@@ -1,20 +1,18 @@
 class Vehicle:
     __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
 
-class Sedan(Vehicle):
-    __PASSENGERS_LIMIT = 5
 
     def __init__(self, owner:str, model:str, color:str, engine_power:int):
-
         if engine_power <= 0:
             print('Мощность должна быть положительной')
-        elif color.lower() not in self._Vehicle__COLOR_VARIANTS:
+        elif color.lower() not in self.__COLOR_VARIANTS:
             print('Такой цвет недоступен')
         else:
             self.owner = owner
             self.__model = model
             self.__engine_power = engine_power
             self.__color = color
+
 
     def get_model(self):
         return f'Модель: {self.__model}'
@@ -32,10 +30,16 @@ class Sedan(Vehicle):
 
 
     def set_color(self, new_color:str):
-        if new_color.lower() not in self._Vehicle__COLOR_VARIANTS:
+        if new_color.lower() not in self.__COLOR_VARIANTS:
             print(f'Нельзя поменять цвет на {new_color}')
         else:
             self.__color = new_color
+
+
+
+class Sedan(Vehicle):
+    __PASSENGERS_LIMIT = 5
+
 
 
 
