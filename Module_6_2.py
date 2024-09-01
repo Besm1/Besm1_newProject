@@ -24,8 +24,10 @@ class Vehicle:
         return f'Цвет: {self.__color}'
 
     def print_info(self):
-        print (self.get_model() + '\n' + str(self.get_horsepower()) + '\n' +
-                self.get_color() + '\nВладелец: ' + self.owner)
+        print(self.get_info())
+
+    def get_info(self):
+        return (f'{self.get_model()} \n{str(self.get_horsepower())} \n{self.get_color()} \nВладелец: {self.owner}')
 
 
 
@@ -40,7 +42,11 @@ class Vehicle:
 class Sedan(Vehicle):
     __PASSENGERS_LIMIT = 5
 
+    def get_passangers_limit(self):
+        return f'Вместительность: {self.__PASSENGERS_LIMIT} пассажиров'
 
+    def print_info(self):
+        print (f'{super().get_info()} \n{self.get_passangers_limit()}')
 
 
 if __name__ == '__main__':
