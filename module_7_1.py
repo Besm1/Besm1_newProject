@@ -14,7 +14,7 @@ class Shop:
     def __init__(self):
         self.__file_name = 'products.txt'
 
- Vjlekm
+
     def get_products(self):
         file = open(self.__file_name, 'r')
         prod_list = file.read()
