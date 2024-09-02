@@ -5,7 +5,7 @@ def custom_write(filename: str, info: list):
     for str_ in info:
         i += 1
         ret[(i, file.tell())] = str_
-        file.write(str_ + '\n')
+        file.write(str_)
 
     return ret
 
@@ -18,6 +18,7 @@ if __name__ == '__main__':
         'Спасибо!'
     ]
 
+    result = custom_write('test.txt', info)
     print(result)
     for elem in result.items():
         print(elem)
